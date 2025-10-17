@@ -143,4 +143,7 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
 
     //search Route
     Route::get('/admin/search', [AdminController::class, 'search'])->name('admin.search');
+
+    //Media Library Route
+    Route::get('/admin/media', App\Livewire\Admin\MediaLibrary::class)->name('admin.media');
 });
